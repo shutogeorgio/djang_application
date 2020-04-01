@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="d-flex flex-column">
+  <h1 class="">nice</h1>
+  <p>{{ request.user }}</p>
+</div>
+{% endblock %}
+
+{% block another_content %}
+  <a href="/contact" class="nav-link">contact</a>
+  <a href="/about" class="nav-link">about</a>
+  <a href="/social" class="nav-link">social</a>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<div>
+  <h1>About Page</h1>
+  <p>{{ my_text}} {{ my_number }}</p>
+  <ul>
+{% for list_item in my_list %}
+    {% if list_item == 767 %}
+      <li>{{ forloop.counter }} - {{ list_item|add:233 }}</li>
+    {% elif list_item == "Yes Man" %}
+      <li>{{ forloop.counter }} - Do what you want</li>
+    {% else %}
+      <li>{{ forloop.counter }} - {{ list_item }}</li>
+    {% endif %}
+{% endfor %}
+  </ul>
+</div>
+{% endblock %}
+
+{% block another_content %}
+  <a href="/home" class="nav-link">social</a>
+  <a href="/contact" class="nav-link">contact</a>
+  <a href="/social" class="nav-link">social</a>
+{% endblock %}
